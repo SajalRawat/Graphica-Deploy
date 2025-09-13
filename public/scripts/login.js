@@ -40,3 +40,6 @@ document.querySelector(".login").addEventListener("click", () => {
         alert("❌ Invalid username or password for " + role);
     }
 });
+
+
+document.querySelector('.signin').addEventListener('click',()=>{window.location.href="./signup.html"})
