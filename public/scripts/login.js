@@ -23,7 +23,13 @@ document.querySelector(".login").addEventListener("click", () => {
     if (!username || !password) {
         alert("Please enter both username and password.");}
     else{
-        window.location.href = "owndashboard.html";
+        if (role=="Hospital") {
+            window.location.href = "owndashboard.html";
+        }
+        else {
+            window.location.href = "pdashboard.html";
+        }
+       
     }
  
 }
