@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  height: 98vh;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+}
+
+.left {
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../../assets/bg-blur.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+  width: 3vw;
+  background-color: white;
+  height: 95vh;
+  transition: all 0.2s ease-in-out;
+}
+
+.left:hover {
+  transform: translateY(-5px);
+}
+
+.left div {
+  padding: 6px 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.left .db {
+  background-color: rgba(0, 0, 0, 0.822);
+  border-radius: 15px;
+}
+
+.left .db img {
+  filter: invert();
+}
+
+.left div:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.358);
+  border-radius: 15px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.right {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 91vw;
+  box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.right .title {
+  padding: 0 20px;
+  font-family: Playfair Display, serif;
+  font-size: 38px;
+}
+
+.right .dailyInfo {
+  background-image: url("../../assets/bg-blur.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 18px;
+  font-family: Playfair Display, serif;
+  width: 95%;
+  box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 12px 10px;
+}
+
+.right .patientsListDiv {
+  margin: 20px;
+  padding: 4px;
+  width: 95%;
+  height: 60vh;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.right .patientInfo {
+  box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+  cursor: pointer;
+  font-family: JetBrains Mono, monospace;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.patientInfo .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.patientInfo .lifeInfo {
+  font-size: 12px;
+}
+
+.patientInfo .date {
+  font-weight: bold;
+}
+
+.patientInfo .OPDType {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.patientInfo .action {
+  display: flex;
+  gap: 10px;
+}
+
+.patientInfo .action .done:hover {
+  background-color: green;
+}
+
+.patientInfo .action .terminate:hover {
+  background-color: red;
+}
+
+.patientInfo .done,
+.patientInfo .terminate {
+  padding: 5px 12px;
+  font-size: 16px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.bookingInfoDiv {
+  overflow: scroll;
+}
+
+.bookingForm {
+  width: 95%;
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(15px);
+  font-family: 'JetBrains Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bookingForm h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.bookingForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bookingForm .formRow {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.bookingForm .formGroup {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.bookingForm .formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.bookingForm .formGroup input,
+.bookingForm .formGroup select {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  outline: none;
+  background: #f7f8fa;
+  transition: all 0.2s ease-in-out;
+}
+
+.bookingForm .formGroup input:focus,
+.bookingForm .formGroup select:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.3);
+}
+
+.bookingForm button {
+  padding: 14px 0;
+  border-radius: 15px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.bookingForm button:hover {
+  background-color: grey;
+  color: black;
+  transform: translateY(-2px);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .left {
+    flex-direction: row;
+    width: 95vw;
+    height: 8vh;
+    justify-content: space-around;
+    border-radius: 12px;
+  }
+
+  .left img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .right {
+    overflow: scroll;
+    width: 95vw;
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+
+  .right .title {
+    font-size: 22px;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .right .dailyInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .patientsListDiv {
+    height: auto;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+
+  .patientInfo {
+    flex-direction: column;
+    width: 90%;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .patientInfo .name {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .patientInfo .lifeInfo {
+    font-size: 12px;
+  }
+
+  .patientInfo .date {
+    font-size: 12px;
+  }
+
+  .patientInfo .OPDType {
+    font-size: 14px;
+  }
+
+  .patientInfo .action {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .patientInfo .action .done,
+  .patientInfo .action .terminate {
+    font-size: 12px;
+    padding: 4px 10px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .bookingForm .formRow {
+    flex-direction: column;
+  }
+  .bookingForm .formGroup {
+    flex: 1 1 100%;
+  }
+  .bookingForm {
+    width: 90%;
+  }
+  .bookingForm button {
+    width: 100%;
+  }
+}
+
+
+.bookingInfo {
+  width: 95%;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  box-shadow: 6px 6px 12px #bebebe, -6px -6px 12px #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  gap: 10px;
+}
+
+.bookingInfo > div {
+  flex: 1 1 18%;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 600px) {
+  .bookingInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bookingInfo > div {
+    flex: 1 1 100%;
+    margin-bottom: 5px;
+  }
+}
