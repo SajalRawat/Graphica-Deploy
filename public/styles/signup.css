@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:wght@600&family=Poppins:wght@400;600&display=swap');
+
+body {
+  background: linear-gradient(135deg, #f0f3f7, #d9e2ec);
+  color: #060d1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
+}
+
+.title {
+  font-size: 55px;
+  font-family: Playfair Display;
+  margin: 10px;
+  align-self: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 28vw;
+  margin: 10px;
+  padding: 13px 13px 40px 13px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  height: auto;
+}
+.main:hover {
+  transform: translateY(-5px);
+}
+
+.userWork {
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  align-self: center;
+}
+.userWork button {
+  cursor: pointer;
+  font-family: JetBrains Mono;
+  font-size: 14px;
+  border-radius: 50px;
+  border: none;
+  color: rgb(0,0,0);
+  padding: 5px 10px;
+  background: #fff;
+  transition: all 0.3s ease-out;
+}
+.userWork button:hover {
+  color: white;
+  background-color: black;
+  transform: translateY(-3px);
+}
+
+.usernamediv, .passdiv {
+  padding: 5px;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid rgba(128,128,128,0.44);
+  width: 70%;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  gap: 5px;
+  margin: 15px 0;
+}
+.username, .pass {
+  border-radius: 15px;
+  font-family: JetBrains Mono;
+  width: 90%;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.username:hover, .pass:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.login {
+  align-self: center;
+  margin: 25px;
+  cursor: pointer;
+  width: 50%;
+  font-family:Playfair Display;
+  background-color: black;
+  color: white;
+  font-size: 18px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  transition: all 0.3s ease-in-out;
+}
+.login:hover {
+  transform: translateY(-5px);
+  background-color: white;
+  color: black;
+}
+
+.signin {
+  cursor: pointer;
+  font-family: Playfair Display;
+  align-self: center;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.signin:hover {
+  transform: translateY(-2px);
+}
+
+.hyperlink {
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    width: 90vw;
+    box-shadow: none;
+  }
+  .username, .pass {
+    width: 80%;
+  }
+}
