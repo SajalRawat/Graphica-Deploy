@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    height: 98vh;
+    /* background: linear-gradient(135deg, #f0f3f7, #d9e2ec);      */
+    background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+}
+
+.left{
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+ background-image: url("../../assets/bg-blur.jpg");    
+   background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;   
+          border-radius: 20px;
+           box-shadow:
+    6px 6px 12px #bebebe,
+    -6px -6px 12px #ffffff;
+    width: 3vw;
+    background-color: white;
+    height: 95vh;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.left:hover{
+    transform: translateY(-5px);
+
+}
+
+.left img{
+    /* margin: 30px 0; */
+
+}
+
+.left div{
+    padding: 6px 4px;
+    transition: all 0.2s ease-in-out;
+    
+    
+}
+
+.left .db{
+    background-color: rgba(0, 0, 0, 0.822);
+    border-radius: 15px;
+    
+}
+.left .db img{
+    filter: invert();
+    
+}
+
+
+.left div:hover{
+    transform: translateY(-3px);
+     background: rgba(255, 255, 255, 0.358);
+  border-radius: 15px;
+  backdrop-filter: blur(20px); 
+  -webkit-backdrop-filter: blur(12px); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+
+}
+
+.right{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    padding: 10px;
+    border: 2px solid black;
+          border-radius: 20px;
+    width: 91vw;
+       box-shadow:
+    6px 6px 12px #bebebe,
+    -6px -6px 12px #ffffff;
+    background-color: white;
+    height: 85vh;
+}
+
+.right .title{
+    padding:  0 20px;
+    font-family: Playfair Display;
+    font-size: 38px;}
+
+.right .dailyInfo{
+ background-image: url("../../assets/bg-blur.jpg");    
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; 
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+
+    font-size: 18px;
+    font-family: Playfair Display;
+    width: 95%;
+box-shadow:
+    6px 6px 12px #bebebe,
+    -6px -6px 12px #ffffff;    border: 2px solid black;
+
+
+}  
+
+.right .patientsListDiv{
+
+    margin: 20px;
+    padding: 4px;
+    /* border: 2px solid black; */
+    width: 95%;
+    height: 60vh;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    overflow: scroll;
+    overflow-y: scroll;
+
+}
+
+.right .patientInfo{
+
+    box-shadow:
+    6px 6px 12px #bebebe,
+    -6px -6px 12px #ffffff;
+    cursor: pointer;
+    font-family: JetBrains Mono;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 0px 20px;
+    width: 97%;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+
+}
+
+.patientInfo .name{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.patientInfo .lifeinfo{
+    font-size: 12px;
+}
+
+.patientInfo .date{
+    font-weight: bold;
+}
+
+.patientInfo .done,.terminate{
+    padding: 5px 12px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.patientInfo .OPDType{
+    font-weight: bold;
+    font-size: 18px;
+}
+.patientInfo .action{
+    display: flex;
+    gap: 10px;
+}
+
+.patientInfo .action .done:hover{
+        background-color: green;
+}
+
+.patientInfo .action .terminate:hover{
+    background-color: red;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  body {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding: 10px;
+  }
+
+  .left {
+    flex-direction: row;
+    width: 95vw;
+    height: 8vh;
+    justify-content: space-around;
+    border-radius: 12px;
+  }
+
+  .left img {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  .right {
+    width: 95vw;
+    height: auto;
+    padding: 10px 10px 30px 10px;
+    margin-bottom: 50px;
+  }
+
+  .right .title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .right .dailyInfo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .patientsListDiv {
+    height: auto;
+    max-height: 70vh;
+    margin: 5px  !important;
+    overflow-y: auto;
+  }
+
+  .patientInfo {
+    flex-direction: column;
+    width: 90%;
+    align-items: flex-start;
+    gap: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .patientInfo .name {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .patientInfo .lifeInfo {
+    font-size: 12px;
+  }
+
+  .patientInfo .date {
+    font-size: 12px;
+  }
+
+  .patientInfo .OPDType {
+    font-size: 14px;
+  }
+
+  .patientInfo .action {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .patientInfo .action .done,
+  .patientInfo .action .terminate {
+    font-size: 12px;
+    padding: 4px 10px;
+    flex: 1;
+    text-align: center;
+  }
+
+  .right{
+    margin-top: 20px;
+  }
+}
