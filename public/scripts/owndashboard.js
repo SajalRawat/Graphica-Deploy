@@ -40,3 +40,16 @@ element.addEventListener('click',(e)=>{
 })
 
 
+
+// ROUTS to different pages
+
+let logout = document.body.querySelector(".logout")
+logout.addEventListener('click',()=>{
+window.location.href = ("./login.html")
+})
+
+let home = document.body.querySelector(".logo")
+home.addEventListener('click',()=>{
+window.location.href = ("./index.html")
+})
+
