@@ -21,25 +21,12 @@ document.querySelector(".login").addEventListener("click", () => {
     const password = document.querySelector(".pass").value.trim();
 
     if (!username || !password) {
-        alert("⚠️ Please enter both username and password.");
-        return;
+        alert("Please enter both username and password.");}
+    else{
+        window.location.href = "owndashboard.html";
     }
-
-    let valid = false;
-
-    if (role === "Hospital" && username === "hospital123" && password === "hospass") {
-        valid = true;
-    } else if (role === "Patient" && username === "patient123" && password === "patpass") {
-        valid = true;
-    }
-
-    if (valid) {
-        alert(`✅ Login successful as ${role}`);
-        window.location.href = "dashboard.html";
-    } else {
-        alert("❌ Invalid username or password for " + role);
-    }
-});
-
+ 
+}
+)
 
 document.querySelector('.signin').addEventListener('click',()=>{window.location.href="./signup.html"})
